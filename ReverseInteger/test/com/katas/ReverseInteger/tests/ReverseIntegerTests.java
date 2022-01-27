@@ -17,11 +17,17 @@ class ReverseIntegerTests {
 		
 	}
 
+	/**
+	 * easiest test to test that Zero returns zero.
+	 */
 	@Test
 	void ZeroReturnsZero() {
 		assertEquals(0, reverse.reverseInt(testInt));
 	}
 	
+	/**
+	 * Test that a number greater than zero with single digit is returned.
+	 */
 	@Test
 	void OneReturnsOne()
 	{
@@ -29,8 +35,12 @@ class ReverseIntegerTests {
 		assertEquals(1, reverse.reverseInt(testInt));
 	}
 	
+	/**
+	 * This section has various number tests
+	 */
+	
 	@Test
-	void OneTwoReturnsTwoOne() throws Exception {
+	void OneTwoReturnsTwoOne()  {
 		testInt = 12;
 		assertEquals(21, reverse.reverseInt(testInt));
 	}
@@ -56,6 +66,7 @@ class ReverseIntegerTests {
 		assertEquals(-321, reverse.reverseInt(testInt));
 	}
 	
+	//test overload and if reversing would cause overload
 	@Test
 	void BiggerThanInt32Test()
 	{
